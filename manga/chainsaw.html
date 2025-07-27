@@ -1,1 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ANIME_ZEROTH_WEB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f1a;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1a1a2e;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      color: #0ff;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: #f5f5f5;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: #0ff;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: #0ff;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .manga-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .manga-card {
+      background: #1c1c2b;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,255,255,0.1);
+      transition: transform 0.3s;
+    }
+
+    .manga-card:hover {
+      transform: scale(1.03);
+    }
+
+    .manga-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .manga-card h3 {
+      padding: 0.5rem;
+    }
+
+    .read-btn {
+      display: inline-block;
+      background: #0ff;
+      color: #000;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .read-btn:hover {
+      background: #00d9d9;
+    }
+
+    .download-btn {
+      display: block;
+      text-align: center;
+      margin: 2rem auto 0;
+      background: #0ff;
+      color: #000;
+      padding: 0.75rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      width: fit-content;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1a1a2e;
+      color: #888;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">ANIME_ZEROTH_WEB</h1>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#manga">Manga Zone</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="section">
+      <h2>Welcome to Anime Zeroth</h2>
+      <p>This is your hub for the latest short manga series. Get reading and enjoy the vibes! 📖</p>
+    </section>
+
+    <section id="manga" class="section">
+      <h2>Manga Zone</h2>
+      <div class="manga-grid">
+        <div class="manga-card">
+          <img src="https://i.imgur.com/Z5UZo9Y.jpeg" alt="Chainsaw Man" />
+          <h3>Chainsaw Man</h3>
+          <a href="manga/chainsaw.html" class="read-btn">Read Now</a>
+        </div>
+        <div class="manga-card">
+          <img src="https://i.imgur.com/YZLJbQv.jpeg" alt="Look Back" />
+          <h3>Look Back</h3>
+          <a href="manga/lookback.html" class="read-btn">Read Now</a>
+        </div>
+        <div class="manga-card">
+          <img src="https://i.imgur.com/1pm0vGA.jpeg" alt="Goodbye Eri" />
+          <h3>Goodbye Eri</h3>
+          <a href="manga/goodbyeeri.html" class="read-btn">Read Now</a>
+        </div>
+        <div class="manga-card">
+          <img src="https://i.imgur.com/QLcW3Ud.jpeg" alt="Fujimoto Short #17-21" />
+          <h3>Fujimoto Short #17-21</h3>
+          <a href="manga/fujimoto1721.html" class="read-btn">Read Now</a>
+        </div>
+      </div>
+
+      <a href="downloads/chainsawman-all.zip" class="download-btn" download>📥 Download All (Chainsaw Man)</a>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Anime Zeroth</h2>
+      <p>Hey I’m Aarush aka Anime Zeroth — your go-to guy for manga edits, anime passion, and cool vibes. This site is just the beginning. Follow and support for more!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 ANIME_ZEROTH_WEB. All rights reserved.</p>
+  </footer>
+</body>
+</html>
 
