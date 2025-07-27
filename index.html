@@ -1,140 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ANIME_ZEROTH_WEB - Neon Theme</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rubik+Glitch&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Orbitron', sans-serif;
-      background: #0f0c29;  /* deep dark blue-purple */
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: #ff79c6; /* neon pink */
-    }
-    h1, h2 {
-      font-family: 'Rubik Glitch', cursive;
-      text-shadow: 0 0 8px #ff79c6;
-    }
-    a {
-      color: #ff79c6;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #50fa7b; /* neon green */
-    }
-    nav {
-      background: rgba(30, 10, 40, 0.85);
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      margin-left: 1rem;
-      font-weight: 700;
-    }
-    .manga-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .manga-card {
-      background: rgba(255, 121, 198, 0.1);
-      border-radius: 12px;
-      padding: 0.75rem;
-      text-align: center;
-      box-shadow: 0 0 12px #ff79c6;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-    .manga-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 24px #50fa7b;
-    }
-    .manga-card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 0.5rem;
-    }
-    footer {
-      margin-top: 2rem;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-  </style>
+  <title>ANIME_ZEROTH_WEB</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav>
-    <h1>ANIME_ZEROTH_WEB</h1>
-    <div>
-      <a href="#home">Home</a>
-      <a href="#manga">Manga Zone</a>
-      <a href="#anime">Anime Zone</a>
-      <a href="#games">Games</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">ANIME_ZEROTH_WEB</h1>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#manga">Manga Zone</a></li>
+        <li><a href="#anime">Anime Zone</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <main style="max-width:900px; margin:2rem auto; padding: 0 1rem;">
-    <section id="home" style="text-align:center;">
-      <h2>Welcome to Anime Zeroth</h2>
+  <main>
+    <section id="home" class="section home-section">
+      <h2>Welcome to <span>Anime Zeroth</span></h2>
       <p>Your ultimate manga and anime corner — with more coming soon!</p>
     </section>
 
-    <section id="manga" style="margin-top:3rem;">
+    <section id="manga" class="section manga-section">
       <h2>Manga Zone</h2>
       <div class="manga-grid">
-        <a href="manga/naruto.html" class="manga-card">
-          <img src="https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg" alt="Naruto" />
-          <div>Naruto</div>
-        </a>
-        <div class="manga-card" style="opacity:0.5; cursor:default;">
-          <img src="https://upload.wikimedia.org/wikipedia/en/2/2c/OnePieceVol61Cover.jpg" alt="One Piece" />
-          <div>One Piece (Coming Soon)</div>
+        <!-- Sample manga cards -->
+        <div class="manga-card">
+          <img src="https://i.imgur.com/8QXjq0b.jpg" alt="Naruto Manga Cover" />
+          <h3>Naruto</h3>
         </div>
-        <div class="manga-card" style="opacity:0.5; cursor:default;">
-          <img src="https://upload.wikimedia.org/wikipedia/en/f/f0/Attack_on_Titan_volume_1_cover.jpg" alt="Attack on Titan" />
-          <div>Attack on Titan (Coming Soon)</div>
+        <div class="manga-card">
+          <img src="https://i.imgur.com/BQ1lFhM.jpg" alt="One Piece Manga Cover" />
+          <h3>One Piece</h3>
+        </div>
+        <div class="manga-card">
+          <img src="https://i.imgur.com/vItlGKw.jpg" alt="Attack on Titan Manga Cover" />
+          <h3>Attack on Titan</h3>
         </div>
       </div>
     </section>
 
-    <section id="anime" style="margin-top:3rem; text-align:center;">
+    <section id="anime" class="section coming-soon-section">
       <h2>Anime Zone</h2>
-      <p style="font-style: italic; opacity:0.7;">Coming Soon 🚀</p>
+      <p class="coming-soon">Coming Soon 🚀</p>
     </section>
 
-    <section id="games" style="margin-top:3rem; text-align:center;">
+    <section id="games" class="section coming-soon-section">
       <h2>Games</h2>
-      <p style="font-style: italic; opacity:0.7;">Coming Soon 🎮</p>
+      <p class="coming-soon">Coming Soon 🎮</p>
     </section>
 
-    <section id="about" style="margin-top:3rem; max-width:600px; margin-left:auto; margin-right:auto;">
+    <section id="about" class="section about-section">
       <h2>About Anime Zeroth</h2>
       <p>
-        Hey, I’m Aarush aka Anime Zeroth — your go-to guy for everything manga and anime edits! This site is just the beginning.
-        Stay tuned for fresh content, and thanks for stopping by! 🙏
+        Hey, I’m Aarush aka Anime Zeroth — your go-to guy for everything manga and anime edits!  
+        This site is just the beginning. Stay tuned for fresh content, and thanks for stopping by! 🙏
       </p>
     </section>
 
-    <section id="contact" style="margin-top:3rem; max-width:600px; margin-left:auto; margin-right:auto; text-align:center;">
+    <section id="contact" class="section contact-section">
       <h2>Contact Me</h2>
       <p>Find me on social media or send a message:</p>
-      <p>
-        <a href="https://www.youtube.com/@Floricff" target="_blank" style="color:#ff79c6; font-weight:bold; margin-right:1rem;">YouTube</a>
-        <a href="https://instagram.com/anime_zeroth" target="_blank" style="color:#ff79c6; font-weight:bold; margin-right:1rem;">Instagram</a>
-        <a href="mailto:aarush@example.com" style="color:#ff79c6; font-weight:bold;">Email Me</a>
-      </p>
+      <div class="contact-links">
+        <a href="https://www.youtube.com/@Floricff" target="_blank" class="btn">YouTube</a>
+        <a href="https://instagram.com/anime_zeroth" target="_blank" class="btn">Instagram</a>
+        <a href="mailto:aarush@example.com" class="btn">Email Me</a>
+      </div>
     </section>
   </main>
 
