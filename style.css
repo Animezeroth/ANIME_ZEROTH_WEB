@@ -1,7 +1,7 @@
 .btn {
   background: #7f00ff;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;   /* more horizontal padding */
   border-radius: 50px;
   font-weight: 600;
   text-decoration: none;
@@ -9,9 +9,8 @@
   transition: 0.3s ease;
   display: inline-block;
   margin-top: 0.5rem;
-}
-
-.btn:hover {
-  background: #ff6ec4;
-  box-shadow: 0 0 20px #ff6ec4;
+  min-width: 130px;        /* ensures minimum width */
+  text-align: center;
+  white-space: nowrap;     /* prevent text wrapping */
+  font-size: 1rem;         /* adjust font size for better fit */
 }
