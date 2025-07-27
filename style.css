@@ -1,226 +1,198 @@
-/* Reset & base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ANIME_ZEROTH_WEB - Minimal Theme</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fefefe;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #f5f5f7;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin-left: 1rem;
+      font-weight: 600;
+      color: #555;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover,
+    nav a.active {
+      color: #6b46c1; /* pastel purple */
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #6b46c1;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #6b46c1;
+    }
+    .section {
+      margin-bottom: 3rem;
+    }
+    .manga-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      justify-items: center;
+    }
+    .manga-card {
+      background-color: #fafafa;
+      border-radius: 12px;
+      box-shadow: 0 0 6px rgba(107, 70, 193, 0.3);
+      padding: 1rem;
+      width: 150px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .manga-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px rgba(107, 70, 193, 0.6);
+    }
+    .manga-card img {
+      width: 100%;
+      height: 220px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+    }
+    .coming-soon {
+      text-align: center;
+      font-style: italic;
+      color: #aaa;
+      font-size: 1.1rem;
+    }
+    .about-section p,
+    .contact-section p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      text-align: center;
+      color: #555;
+    }
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .btn {
+      background-color: #6b46c1;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #553c9a;
+    }
+    footer {
+      background-color: #f5f5f7;
+      color: #888;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">ANIME_ZEROTH_WEB</div>
+    <div>
+      <a href="#home" class="active">Home</a>
+      <a href="#manga">Manga Zone</a>
+      <a href="#anime">Anime Zone</a>
+      <a href="#games">Games</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-body {
-  background-color: #0f0f1a;
-  color: #ddd;
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-}
+  <main>
+    <section id="home" class="section">
+      <h2>Welcome to Anime Zeroth</h2>
+      <p class="text-center max-w-xl mx-auto">Your ultimate manga and anime corner — with more coming soon!</p>
+    </section>
 
-/* Navbar */
-.navbar {
-  background-color: #111126;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 3rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 0 10px #7f00ff;
-}
+    <section id="manga" class="section">
+      <h2>Manga Zone</h2>
+      <div class="manga-grid">
+        <a href="manga/naruto.html" class="manga-card">
+          <img src="https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg" alt="Naruto" />
+          <div>Naruto</div>
+        </a>
+        <div class="manga-card" style="opacity:0.5; cursor:default;">
+          <img src="https://upload.wikimedia.org/wikipedia/en/2/2c/OnePieceVol61Cover.jpg" alt="One Piece" />
+          <div>One Piece (Coming Soon)</div>
+        </div>
+        <div class="manga-card" style="opacity:0.5; cursor:default;">
+          <img src="https://upload.wikimedia.org/wikipedia/en/f/f0/Attack_on_Titan_volume_1_cover.jpg" alt="Attack on Titan" />
+          <div>Attack on Titan (Coming Soon)</div>
+        </div>
+      </div>
+    </section>
 
-.logo {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.8rem;
-  color: #b270ff;
-  letter-spacing: 2px;
-}
+    <section id="anime" class="section text-center">
+      <h2>Anime Zone</h2>
+      <p class="coming-soon">Coming Soon 🚀</p>
+    </section>
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
+    <section id="games" class="section text-center">
+      <h2>Games</h2>
+      <p class="coming-soon">Coming Soon 🎮</p>
+    </section>
 
-.nav-links a {
-  color: #ccc;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.3rem 0.6rem;
-  border-radius: 5px;
-  transition: 0.3s ease;
-}
+    <section id="about" class="section">
+      <h2>About Anime Zeroth</h2>
+      <p>
+        Hey, I’m Aarush aka Anime Zeroth — your go-to guy for everything manga and anime edits! This site is just the beginning.
+        Stay tuned for fresh content, and thanks for stopping by! 🙏
+      </p>
+    </section>
 
-.nav-links a:hover,
-.nav-links a.active {
-  background: #7f00ff;
-  color: #fff;
-  box-shadow: 0 0 10px #7f00ff;
-}
+    <section id="contact" class="section text-center">
+      <h2>Contact Me</h2>
+      <p>Find me on social media or send a message:</p>
+      <div class="contact-links">
+        <a href="https://www.youtube.com/@Floricff" target="_blank" class="btn">YouTube</a>
+        <a href="https://instagram.com/anime_zeroth" target="_blank" class="btn">Instagram</a>
+        <a href="mailto:aarush@example.com" class="btn">Email Me</a>
+      </div>
+    </section>
+  </main>
 
-/* Sections */
-.section {
-  padding: 5rem 3rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* Home Section */
-.home-section h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
-  color: #a870ff;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 8px #b270ff;
-}
-
-.home-section span {
-  color: #ff6ec4;
-  text-shadow: 0 0 10px #ff6ec4;
-}
-
-.home-section p {
-  font-size: 1.2rem;
-  color: #ccc;
-  margin-top: 0.5rem;
-}
-
-/* Manga Section */
-.manga-section h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #bb7fff;
-  text-shadow: 0 0 8px #bb7fff;
-}
-
-.manga-grid {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.manga-card {
-  background: #1a1a2e;
-  border-radius: 15px;
-  padding: 1rem;
-  width: 180px;
-  box-shadow: 0 0 10px #7f00ff88;
-  transition: transform 0.3s ease;
-}
-
-.manga-card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px #ff6ec4cc;
-}
-
-.manga-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-.manga-card h3 {
-  color: #ff6ec4;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-}
-
-/* Coming Soon */
-.coming-soon-section {
-  color: #ff4f91;
-  font-family: 'Orbitron', sans-serif;
-  text-shadow: 0 0 15px #ff4f91;
-}
-
-.coming-soon {
-  font-size: 2rem;
-  margin-top: 1rem;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    text-shadow: 0 0 10px #ff4f91;
-  }
-  50% {
-    text-shadow: 0 0 30px #ff4f91;
-  }
-}
-
-/* About Section */
-.about-section h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #bb7fff;
-  text-shadow: 0 0 8px #bb7fff;
-}
-
-.about-section p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto;
-  color: #ccc;
-  line-height: 1.7;
-}
-
-/* Contact Section */
-.contact-section h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #bb7fff;
-  text-shadow: 0 0 8px #bb7fff;
-}
-
-.contact-section p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: #ccc;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.btn {
-  background: #7f00ff;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 0 10px #7f00ff;
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  background: #ff6ec4;
-  box-shadow: 0 0 20px #ff6ec4;
-}
-
-/* Footer */
-footer {
-  background-color: #111126;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #888;
-  margin-top: 4rem;
-  box-shadow: inset 0 1px 0 #7f00ff;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .manga-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+  <footer>
+    <p>© 2025 ANIME_ZEROTH_WEB. All rights reserved.</p>
+  </footer>
+</body>
+</html>
