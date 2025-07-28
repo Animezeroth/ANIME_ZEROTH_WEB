@@ -307,4 +307,43 @@
       <h2>Contact Me</h2>
       <p>Find me on social media or send a message:</p>
       <div class="contact-links">
-        <a href="https://www.youtube.com/@Floricff" target="_blank" class="btn">
+        <a href="https://www.youtube.com/@Floricff" target="_blank" class="btn">YouTube Channel</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Anime Zeroth. All rights reserved.
+  </footer>
+
+  <script>
+    const quotes = [
+      { text: "Believe in yourself and all that you are.", author: "Christian D. Larson" },
+      { text: "Push yourself, because no one else is going to do it for you.", author: "Unknown" },
+      { text: "Discipline beats motivation.", author: "Anime Zeroth" },
+      { text: "Your time is limited, so don’t waste it living someone else’s life.", author: "Steve Jobs" },
+      { text: "Anime teaches us — even in fiction, resilience is real.", author: "Anime Zeroth" },
+      { text: "A person grows with challenges, not comfort.", author: "Anime Zeroth" },
+      { text: "Dream big. Start small. Act now.", author: "Robin Sharma" },
+      { text: "Quiet minds create loud legacies.", author: "Unknown" },
+      { text: "Hard times create strong people.", author: "Anime Zeroth" },
+      { text: "Hustle in silence, let your success make the noise.", author: "Unknown" }
+    ];
+
+    function getDayOfYear() {
+      const now = new Date();
+      const start = new Date(now.getFullYear(), 0, 0);
+      const diff = now - start + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+      return Math.floor(diff / (1000 * 60 * 60 * 24));
+    }
+
+    const dayIndex = getDayOfYear() % quotes.length;
+    const quoteToday = quotes[dayIndex];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("quoteText").innerText = `"${quoteToday.text}"`;
+      document.getElementById("quoteAuthor").innerText = `– ${quoteToday.author}`;
+    });
+  </script>
+</body>
+</html>
